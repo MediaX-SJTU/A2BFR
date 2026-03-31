@@ -20,7 +20,7 @@ Ya Zhang<sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;Xiaoyun Zhang<sup>1,†</sup>&nbsp;&
 
 ## 🌟 Overview
 <div align="center">
-  <img src="static/teaser.png" alt="" width="80%">
+  <img src="static/images/teaser.png" alt="" width="80%">
 </div>
 
 1. Built on **FLUX.1-dev**, we train an **Attribute-Aware** blind face restoration (BFR) model using **LoRA**, and inject the low-resolution (LR) condition via **sequence concatenation**.  
@@ -33,20 +33,20 @@ Ya Zhang<sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;Xiaoyun Zhang<sup>1,†</sup>&nbsp;&
 ### Customizable Results with Attribute Prompts
 
 <div align="center">
-  <img src="static/visual.png" alt="" width="80%">
+  <img src="static/images/visual.png" alt="" width="80%">
 </div>
 
 **A<sup>2</sup>BFR** enables customizable restoration via attribute prompts. Each column presents diverse outputs generated from the same low-quality input under different facial attribute conditions (e.g., *smiling*, *eyeglasses*), demonstrating controllable, user-directed face restoration. 
 
 <div align="center">
-  <img src="static/ood.png" alt="" width="80%">
+  <img src="static/images/ood.png" alt="" width="80%">
 </div>
 **A<sup>2</sup>BFR** exhibits strong generalization beyond the 12 attribute categories defined in AttrFace-90K. It can respond to out-of-domain attribute prompts and produce the corresponding edits, demonstrating robust cross-attribute generalization.
 
 ### Comparison with BFR Methods
 
 <div align="center">
-  <img src="static/quality_visual.png" alt="" width="80%">
+  <img src="static/images/quality_visual.png" alt="" width="80%">
 </div>
 
 **A<sup>2</sup>BFR** delivers superior restoration quality compared with existing BFR methods.
@@ -54,14 +54,14 @@ Ya Zhang<sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;Xiaoyun Zhang<sup>1,†</sup>&nbsp;&
 ### Comparison with Restore-then-Edit Pipelines
 
 <div align="center">
-  <img src="static/visual2.png" alt="" width="80%">
+  <img src="static/images/visual2.png" alt="" width="80%">
 </div>
 
 Restore-then-edit pipelines often compromise fidelity to the low-quality (LQ) input. In contrast, **A<sup>2</sup>BFR** produces restorations that are both **faithful** to the input and **aligned** with the specified attributes.
 
 ## 🗂️ Dataset
 <div align="center">
-  <img src="static/AttrFace.png" alt="" width="90%">
+  <img src="static/images/AttrFace.png" alt="" width="90%">
 </div>
 
 **Left:** Examples of image and prompt pairs in AttrFace-90K.  
