@@ -71,15 +71,15 @@ Restore-then-edit pipelines often compromise fidelity to the low-quality (LQ) in
 
 ## ⚙ Dependencies and Installation
 
-To be updated.
+Coming soon...
 
 ## 🍭 Inference with script
 
-To be updated.
+Coming soon...
 
 ## 🔥 Training
 
-To be updated.
+Coming soon...
 
 
 ## License
