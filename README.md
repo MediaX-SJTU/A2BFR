@@ -1,7 +1,7 @@
 <div align="center">
 <h2>A<sup>2</sup>BFR: Attribute-Aware Blind Face Restoration</h2>
 
-<a href='https://arxiv.org/abs/2603.29423'>
+<a href='https://arxiv.org/abs/2603.29423'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
 
 </div>
 
