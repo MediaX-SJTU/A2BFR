@@ -1,14 +1,8 @@
 <div align="center">
 <h2>A<sup>2</sup>BFR: Attribute-Aware Blind Face Restoration</h2>
 
-<!-- <a href='https://arxiv.org/abs/2511.17138'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
+<a href='https://arxiv.org/abs/2603.29423'>
 
-
-Yushun Fang<sup>1,2,\*</sup>&nbsp;&nbsp;&nbsp;&nbsp;Yuxiang Chen<sup>2,\*</sup>&nbsp;&nbsp;&nbsp;&nbsp;Shibo Yin<sup>2,†</sup>&nbsp;&nbsp;&nbsp;&nbsp;Qiang Hu<sup>1,†</sup>&nbsp;&nbsp;&nbsp;&nbsp;Jiangchao Yao<sup>1</sup>  
-Ya Zhang<sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;Xiaoyun Zhang<sup>1,†</sup>&nbsp;&nbsp;&nbsp;&nbsp;Yanfeng Wang<sup>1</sup>  
-<sup>1</sup>Shanghai Jiao Tong University&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>Xiaohongshu Inc  
-<sup>\*</sup>Equal contribution&nbsp;&nbsp;&nbsp;&nbsp;<sup>†</sup>Corresponding author
--->
 </div>
 
 
