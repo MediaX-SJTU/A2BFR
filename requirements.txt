@@ -1,0 +1,13 @@
+accelerate
+opencv-python
+peft
+protobuf
+sentencepiece
+safetensors
+torch
+torchvision
+transformers
+diffusers
+imgaug
+Pillow
+tqdm

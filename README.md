@@ -2,11 +2,13 @@
 <h2>A<sup>2</sup>BFR: Attribute-Aware Blind Face Restoration</h2>
 
 <a href='https://arxiv.org/abs/2603.29423'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
+<a href='https://huggingface.co/thetrigger/A2BFR'><img src='https://img.shields.io/badge/Model-HuggingFace-yellow'></a>
 
 </div>
 
 
 ## ⏰ Update
+- **2026.06.24**: Inference code and model weights are released.
 - **2025.12.30**: Repo is created.
 
 
@@ -65,19 +67,73 @@ Restore-then-edit pipelines often compromise fidelity to the low-quality (LQ) in
 
 ## ⚙ Dependencies and Installation
 
-Coming soon...
+```bash
+conda create -n a2bfr python=3.10 -y
+conda activate a2bfr
+pip install -r requirements.txt
+```
+
+Please install a CUDA-compatible PyTorch build for your GPU environment if it is not already available.
 
 ## 🍭 Inference with script
 
-Coming soon...
+This repository currently releases inference code only. Evaluation scripts, datasets, private experiment paths, and training code are not included in this release.
+
+You need two model paths:
+
+- `--base-model`: the FLUX.1-dev base model directory or Hugging Face model id.
+- `--lora`: the A<sup>2</sup>BFR LoRA checkpoint, usually `default.safetensors`.
+
+Download the released A<sup>2</sup>BFR LoRA checkpoint from Hugging Face:
+
+```bash
+hf download thetrigger/A2BFR default.safetensors --local-dir checkpoints/A2BFR
+```
+
+The model weights are hosted at [thetrigger/A2BFR](https://huggingface.co/thetrigger/A2BFR). Please download or prepare `FLUX.1-dev` separately and follow its license/usage terms.
+
+Single image inference:
+
+```bash
+python infer.py \
+  --base-model /path/to/FLUX.1-dev \
+  --lora checkpoints/A2BFR/default.safetensors \
+  --condition-image /path/to/lq_face.png \
+  --output-dir outputs/demo \
+  --prompt "A photo of a human face" \
+  --guidance-scale 3.0 \
+  --seed 0 \
+  --concat
+```
+
+Batch inference:
+
+```bash
+python infer.py \
+  --base-model /path/to/FLUX.1-dev \
+  --lora checkpoints/A2BFR/default.safetensors \
+  --input-dir /path/to/lq_faces \
+  --output-dir outputs/batch \
+  --prompt "A high-quality, high-resolution, realistic, and extremely detailed image of a human face" \
+  --guidance-scale 3.0 \
+  --seed 0
+```
+
+Useful options:
+
+- `--prompt`: controls facial attributes with text.
+- `--width` / `--height`: default to `512`.
+- `--dtype`: defaults to `bfloat16`; use `float16` if needed.
+- `--preprocess deblurring`: creates a degraded condition image from a clean input. For already low-quality inputs, keep the default `--preprocess none`.
+- `--save-condition`: saves the resized/preprocessed condition image.
 
 ## 🔥 Training
 
-Coming soon...
+Training code will be released.
 
 
 ## License
-This project is released under the [Apache 2.0 license](LICENSE).
+This project is released under the [Apache 2.0 license](LICENSE.txt).
 
 ## Acknowledgement
 This project is based on [OminiControl](https://github.com/Yuanshi9815/OminiControl).
